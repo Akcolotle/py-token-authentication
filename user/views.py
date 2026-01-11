@@ -5,13 +5,13 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 
-from user.serializers import UserRegisterSerializer, UserSerializer
+from user.serializers import UserSerializer
 
 User = get_user_model()
 
 
 class RegisterView(generics.CreateAPIView):
-    serializer_class = UserRegisterSerializer
+    serializer_class = UserSerializer
     permission_classes = [AllowAny]
 
 
